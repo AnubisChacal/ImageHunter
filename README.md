@@ -1,28 +1,49 @@
-# 🌐 Scrapper de produtos do Mercado Livre
+# 🖼️🎯 ImageHunter
 
-Este projeto tem como objetivo criar um scraper para extrair imagens da Istock. Inicialmente.
+ImageHunter é uma ferramenta desenvolvida em Python que utiliza Selenium para buscar e baixar imagens automaticamente do site iStock. O projeto foi criado para automatizar o processo de pesquisa e download de imagens, facilitando o trabalho de quem precisa coletar um grande número de imagens para projetos de design, marketing, ou análise.
 
-## ⭐️ Como usar
+## 🛠️ Funcionalidades
 
-- Faça a instalação do pacote requeriments.txt pois ele contem as bibliotecas necessarias
-    - Comando: pip install -r requirements.txt
+- **Busca automatizada**: Realiza buscas por termos específicos no iStock e navega pelos resultados.
+- **Download de imagens**: Baixa automaticamente as imagens encontradas na pesquisa e as salva em um diretório específico.
+- **Armazenamento organizado**: Cria diretórios com base no termo de pesquisa para organizar as imagens baixadas.
 
+## 📂 Estrutura do Projeto
 
-  
-- Faça a instalação do WebDriver do browser
-    - Colocar o Webdriver dentro da pasta aonde o python esteja instaldo que geramente é:
-         ## C:\Users\ <Seu user> \AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Python 3.11
-  
-  ### ⚠️Atenção⚠️
-  É necessario fazer a instalação do WebDriver referente ao browser que esta seno utilizado tanto no programa quanto na maquina.
-  Nesse projeto utilizei o WebDriver do Firefox e o Browser do Firefox, o WebDrive do FireFox é conhecido com "geckodriver", por segurança irei disponibilizar os links de instalação do WebDriver e do Browser
+- **`ImageHunter.py`**: Script principal que realiza a busca e o download das imagens.
+- **`/imagens`**: Diretório onde as imagens baixadas são armazenadas.
 
-## Links 🚀
+## 🚀 Como Usar
 
-- GeckoDriver: https://github.com/mozilla/geckodriver/releases
-- Browser: https://www.mozilla.org/pt-BR/firefox/new/
+1. **Clone o repositório**:
+    ```bash
+    git clone https://github.com/AnubisChacal/ImageHunter.git
+    ```
 
+2. **Instale as dependências**:
+    ```bash
+    pip install selenium requests
+    ```
 
- # 🚧 Cuidado 🚧
+3. **Configure o script**:
+   - Substitua a variável `pesquisa` no script com o termo de busca desejado (por exemplo, "superman").
+   - Verifique o caminho do `geckodriver` para Firefox e ajuste se necessário.
 
-Qualquer modificação no WebDriver deve ser devidamente documentada no programa, pois pode impedir o funcionamento adequado do mesmo posteriormente.
+4. **Execute o script**:
+    ```bash
+    python ImageHunter.py
+    ```
+
+5. **Resultados**:
+   - As imagens serão baixadas para um diretório com o nome do termo de pesquisa.
+
+## 🛠️ Requisitos
+
+- **Python 3.x**
+- **Selenium**
+- **Requests**
+- **Geckodriver** (para Firefox)
+
+## 📝 Observações
+
+- Certifique-se de respeitar os termos de serviço do iStock ao utilizar web scrapers para baixar imagens.
